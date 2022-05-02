@@ -1,0 +1,49 @@
+#cryptex {
+  box-shadow: inset 5px 5px 5px hsl($purple, 70%, 70%);
+  height: 100px;
+  margin: $space*2 $space;
+  max-width: $max-width;
+  // min-width: $min-width;
+
+  @include bg-color($purple, 70%, 25%);
+  @include display-flex;
+  @include padding-horizontal-same($space*2);
+  @include border(2px, solid, hsl($purple, 70%, 10%), 50px);
+
+  div {
+    box-shadow: 1px 1px 5px hsl($purple, 70%, 10%);
+    height: 50%;
+    text-transform: uppercase;
+    transition: all linear 0.1s;
+    user-select: none;
+
+    @include bg-color($orange, 100%, 98%);
+    @include border(2px, solid, hsl($purple, 70%, 20%), 5px);
+    @include display-flex(row, center, center);
+    @include padding-horizontal-same(1%);
+
+    &:hover {
+      box-shadow: 0px 0px 8px hsl($orange, 100%, 95%);
+
+      @include bg-color($orange, 100%, 90%);
+    }
+
+    @media only screen and (min-width: 440px) {
+      @include padding-horizontal-same(1.25%);
+    }
+
+    @media only screen and (min-width: 550px) {
+      @include padding-horizontal-same(1.75%);
+    }
+  }
+
+  @media only screen and (min-width: 550px) {
+    margin: $space*2 auto;
+    max-width: 518px;
+  }
+
+  @media only screen and (min-width: 880px) {
+    margin: 0 0 0 $space*2;
+    max-width: none;
+  }
+}

@@ -1,0 +1,473 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Roboto:wght@400;700&display=swap");
+
+h2,
+h3 {
+  border-radius: 5px;
+  display: inline-block;
+  font-weight: bold;
+  letter-spacing: 1px;
+  padding: 12px;
+  text-transform: uppercase;
+  background-color: hsla(38deg, 100%, 100%, 0.7);
+}
+
+.input-container input:focus, .input-container textarea:focus {
+  border-color: hsl(145deg, 100%, 40%);
+  outline: none;
+}
+
+@media only screen and (min-width: 880px) {
+  main {
+    display: grid;
+    grid-gap: 32px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: "cryptex cryptex cryptex ." "encrypt encrypt decrypt decrypt";
+  }
+
+  main #cryptex {
+    grid-area: cryptex;
+  }
+
+  main #encrypt-section {
+    grid-area: encrypt;
+  }
+
+  main #decrypt-section {
+    grid-area: decrypt;
+  }
+}
+
+h1 {
+  display: none;
+}
+
+h2 {
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-size: 28px;
+}
+
+h3,
+h4 {
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-size: 24px;
+}
+
+p,
+label {
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-size: 18px;
+}
+
+input,
+button {
+  font-size: 18px;
+}
+
+.output-buttons-container button {
+  text-transform: uppercase;
+}
+
+@media only screen and (min-width: 440px) {
+  button {
+    font-size: 24px;
+  }
+}
+
+#cryptex,
+#encrypt-value,
+#decrypt-value,
+button {
+  font-family: "Roboto Mono", "Courier New", Courier, monospace;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+@media only screen and (min-width: 550px) {
+  #cryptex {
+    font-size: 20px;
+  }
+}
+
+#cryptex {
+  box-shadow: inset 5px 5px 5px hsl(275deg, 70%, 70%);
+  height: 100px;
+  margin: 32px 16px;
+  max-width: 700px;
+  background-color: hsl(275deg, 70%, 25%);
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 32px;
+  padding-right: 32px;
+  border-color: hsl(275deg, 70%, 10%);
+  border-radius: 50px;
+  border-style: solid;
+  border-width: 2px;
+}
+
+#cryptex div {
+  box-shadow: 1px 1px 5px hsl(275deg, 70%, 10%);
+  height: 50%;
+  text-transform: uppercase;
+  transition: all linear 0.1s;
+  user-select: none;
+  background-color: hsl(38deg, 100%, 98%);
+  border-color: hsl(275deg, 70%, 20%);
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-left: 1%;
+  padding-right: 1%;
+}
+
+#cryptex div:hover {
+  box-shadow: 0px 0px 8px hsl(38deg, 100%, 95%);
+  background-color: hsl(38deg, 100%, 90%);
+}
+
+@media only screen and (min-width: 440px) {
+  #cryptex div {
+    padding-left: 1.25%;
+    padding-right: 1.25%;
+  }
+}
+
+@media only screen and (min-width: 550px) {
+  #cryptex div {
+    padding-left: 1.75%;
+    padding-right: 1.75%;
+  }
+}
+
+@media only screen and (min-width: 550px) {
+  #cryptex {
+    margin: 32px auto;
+    max-width: 518px;
+  }
+}
+
+@media only screen and (min-width: 880px) {
+  #cryptex {
+    margin: 0 0 0 32px;
+    max-width: none;
+  }
+}
+
+.input-container {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.input-container textarea {
+  min-height: 100px;
+  padding: 16px;
+  resize: vertical;
+  width: 100%;
+  border-color: hsl(38deg, 100%, 20%);
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 2px;
+}
+
+.input-container input {
+  padding: 8px 16px;
+  border-color: hsl(38deg, 100%, 20%);
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 2px;
+}
+
+.input-container .own-cipher {
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.input-container .own-cipher input {
+  width: 65%;
+}
+
+@media only screen and (min-width: 440px) {
+  .input-container .own-cipher input {
+    width: 75%;
+  }
+}
+
+@media only screen and (min-width: 880px) {
+  .input-container .own-cipher input {
+    width: 70%;
+  }
+}
+
+.cipher-button,
+.submit-value {
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.cipher-button {
+  height: 35px;
+  transition: all linear 0.1s;
+  user-select: none;
+  width: 35px;
+  background-color: hsl(38deg, 100%, 98%);
+  border-color: hsl(38deg, 70%, 20%);
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+}
+
+.cipher-button:hover {
+  box-shadow: 0px 0px 8px hsl(38deg, 100%, 95%);
+  background-color: hsl(38deg, 100%, 90%);
+}
+
+.cipher-button:active {
+  box-shadow: 0px 0px 8px hsl(145deg, 100%, 50%), inset 1px 1px 4px hsl(145deg, 100%, 0%);
+  color: hsl(145deg, 70%, 95%);
+  background-color: hsl(145deg, 100%, 20%);
+  border-color: hsl(145deg, 70%, 95%);
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+}
+
+@media only screen and (min-width: 440px) {
+  .cipher-button {
+    height: 45px;
+    width: 45px;
+  }
+}
+
+.encrypt-pressed-button,
+.decrypt-pressed-button {
+  box-shadow: 0px 0px 8px hsl(145deg, 100%, 50%), inset 1px 1px 4px hsl(145deg, 100%, 0%);
+  color: hsl(145deg, 70%, 95%);
+  user-select: none;
+  background-color: hsl(145deg, 100%, 20%);
+  border-color: hsl(145deg, 70%, 95%);
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+}
+
+.encrypt-pressed-button:hover,
+.decrypt-pressed-button:hover {
+  box-shadow: 0px 0px 8px hsl(145deg, 100%, 50%), inset 1px 1px 4px hsl(145deg, 100%, 0%);
+  background-color: hsl(145deg, 100%, 20%);
+}
+
+.encrypt-pressed-button:active,
+.decrypt-pressed-button:active {
+  box-shadow: 0px 0px 8px hsl(145deg, 100%, 50%), inset 1px 1px 4px hsl(145deg, 100%, 0%);
+  color: hsl(145deg, 70%, 95%);
+  background-color: hsl(145deg, 100%, 20%);
+  border-color: hsl(145deg, 70%, 95%);
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+}
+
+.submit-value {
+  box-shadow: inset 1px 1px 2px hsl(145deg, 100%, 60%);
+  color: hsl(145deg, 70%, 95%);
+  height: 35px;
+  transition: all linear 0.1s;
+  user-select: none;
+  background-color: hsl(145deg, 100%, 20%);
+  border-color: hsl(145deg, 70%, 95%);
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.submit-value:hover {
+  box-shadow: none;
+  color: hsl(145deg, 100%, 10%);
+  background-color: hsl(145deg, 100%, 90%);
+}
+
+.submit-value:active {
+  box-shadow: inset 1px 1px 4px hsl(145deg, 100%, 20%);
+}
+
+@media only screen and (min-width: 440px) {
+  .submit-value {
+    height: 45px;
+  }
+}
+
+.output-buttons-container button {
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 4px 8px;
+}
+
+.output-buttons-container .reset-button {
+  color: hsl(0deg, 100%, 100%);
+  background-color: hsl(0deg, 100%, 30%);
+}
+
+.alert {
+  padding-bottom: 16px;
+  padding-top: 16px;
+  margin-bottom: 16px;
+  margin-top: 16px;
+  background-color: hsl(0deg, 100%, 90%);
+  border-color: hsl(0deg, 100%, 40%);
+  border-radius: 0;
+  border-style: solid;
+  border-width: 2px;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.alert p {
+  font-weight: 700;
+  margin: 0;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.hidden {
+  display: none;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: hsl(38deg, 100%, 10%);
+}
+
+main {
+  min-width: 350px;
+}
+
+main h2 {
+  margin-bottom: 32px;
+}
+
+main h3 {
+  margin-bottom: 16px;
+}
+
+main h4 {
+  margin-bottom: 12px;
+}
+
+main label,
+main p {
+  margin-bottom: 8px;
+}
+
+@media only screen and (min-width: 880px) {
+  main {
+    margin: 32px auto;
+    max-width: 816px;
+  }
+}
+
+@media only screen and (min-width: 990px) {
+  main {
+    max-width: 990px;
+  }
+}
+
+.encrypt-decrypt {
+  border-radius: 10px;
+  margin: 32px 16px;
+  padding: 16px;
+  background-color: hsl(38deg, 77%, 55%);
+}
+
+.encrypt-decrypt .input-section {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.encrypt-decrypt .output-section {
+  margin-top: 20px;
+}
+
+.encrypt-decrypt .output-section .text-output {
+  border-radius: 10px;
+  height: 100px;
+  overflow-y: scroll;
+  padding: 16px;
+  width: 100%;
+  background-color: hsla(38deg, 100%, 100%, 0.9);
+}
+
+.encrypt-decrypt .output-section .output-buttons-container {
+  margin-top: 8px;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.encrypt-decrypt .cipher-section {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.encrypt-decrypt .cipher-section .cipher-buttons-container {
+  padding: 16px;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: hsla(38deg, 100%, 10%, 0.7);
+}
+
+.encrypt-decrypt .cipher-section .custom-cipher {
+  margin-bottom: 8px;
+  margin-top: 8px;
+}
+
+@media only screen and (min-width: 550px) {
+  .encrypt-decrypt {
+    max-width: 518px;
+    margin: 32px auto;
+  }
+}
+
+@media only screen and (min-width: 880px) {
+  .encrypt-decrypt {
+    margin: 0;
+    max-width: 440px;
+  }
+}
+
+@media only screen and (min-width: 880px) {
+  #encrypt-section {
+    margin-left: 32px;
+  }
+}
+
+@media only screen and (min-width: 880px) {
+  #decrypt-section {
+    margin-right: 32px;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

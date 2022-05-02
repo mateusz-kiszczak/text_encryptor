@@ -1,0 +1,23 @@
+@media only screen and (min-width: 880px) {
+  main {
+    display: grid;
+    grid-gap: $space*2;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "cryptex cryptex cryptex ."
+    "encrypt encrypt decrypt decrypt";
+
+    #cryptex {
+      grid-area: cryptex;
+    }
+
+    #encrypt-section {
+      grid-area: encrypt;
+    }
+
+    #decrypt-section {
+      grid-area: decrypt;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+.input-container {
+  @include display-flex(column, space-between ,flex-start);
+
+  textarea {
+    min-height: 100px;
+    padding: $space;
+    resize: vertical;
+    width: 100%;
+
+    @include border(2px, solid, hsl($orange, 100%, 20%), 10px);
+    
+    @extend %input-focus;
+
+  }
+  
+  input {
+    padding: $space*0.5 $space;
+
+    @include border(2px, solid, hsl($orange, 100%, 20%), 10px);
+
+    @extend %input-focus;
+  }
+
+  .own-cipher {
+    width: 100%;
+
+    @include display-flex;
+
+    input {
+      width: 65%;
+
+      @media only screen and (min-width: 440px) {
+        width: 75%;
+      }
+
+      @media only screen and (min-width: 880px) {
+        width: 70%;
+      }
+    }
+  }
+}

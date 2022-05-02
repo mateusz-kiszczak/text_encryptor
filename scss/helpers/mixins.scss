@@ -1,0 +1,46 @@
+// BORDER
+@mixin border($width, $style, $color, $radius: 0) {
+  border: {
+    color: $color;
+    radius: $radius;
+    style: $style;
+    width: $width;
+  }
+}
+
+// COLOR
+@mixin bg-color($hue, $saturation, $lightness, $alpha: 1) {
+  background-color: hsl($hue, $saturation, $lightness, $alpha);
+}
+
+// FLEX DISPLAY
+@mixin display-flex($direction: row, $justify: space-between, $align: center) {
+  align-items: $align;
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+}
+
+// HORIZONTAL PADDING
+@mixin padding-horizontal-same($val) {
+  padding: {
+    left: $val;
+    right: $val;
+  }
+}
+
+// VERTICAL MARGIN
+@mixin margin-vertical-same($val) {
+  margin: {
+    bottom: $val;
+    top: $val;
+  }
+}
+
+// VERTICAL PADDING
+@mixin padding-vertical-same($val) {
+  padding: {
+    bottom: $val;
+    top: $val;
+  }
+}

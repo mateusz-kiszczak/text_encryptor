@@ -1,0 +1,121 @@
+@import 'helpers/variables.scss';
+@import 'helpers/mixins.scss';
+@import 'helpers/placeholders.scss';
+
+@import 'layout/grid';
+
+@import 'typography/typography.scss';
+@import 'components/cryptex.scss';
+@import 'components/inputs.scss';
+@import 'components/buttons.scss';
+@import 'components/alerts.scss';
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  @include bg-color($orange, 100%, 10%);
+}
+
+main {
+  min-width: $min-width;
+
+  h2 {
+    margin-bottom: $space*2;
+  }
+
+  h3 {
+    margin-bottom: $space;
+  }
+
+  h4 {
+    margin-bottom: $space*0.75;
+  }
+
+  label,
+  p {
+    margin-bottom: $space*0.5;
+  }
+
+  @media only screen and (min-width: 880px) {
+    margin: $space*2 auto;
+    max-width: 816px;
+  }
+
+  @media only screen and (min-width: 990px) {
+    max-width: 990px;
+  }
+}
+
+.encrypt-decrypt {
+  border-radius: 10px;
+  margin: $space*2 $space;
+  padding: $space;
+
+  @include bg-color($orange, 77%, 55%);
+
+  .input-section {
+    @include margin-vertical-same($space*1.25);
+  }
+
+  .output-section {
+    margin-top: $space*1.25;
+
+    .text-output {
+      border-radius: 10px;
+      height: 100px;
+      overflow-y: scroll;
+      padding: $space;
+      width: 100%;
+      
+      @include bg-color($orange, 100%, 100%, 0.9);
+    }
+
+    .output-buttons-container {
+      margin-top: $space*0.5;
+      width: 100%;
+
+      @include display-flex;
+    }
+  }
+  
+  .cipher-section {
+    @include margin-vertical-same($space*1.25);
+    
+    .cipher-buttons-container {
+      padding: $space;
+
+      @include display-flex(row, space-between ,center);
+      @include bg-color($orange, 100%, 10%, 0.7);
+    }
+
+    .custom-cipher {
+      @include margin-vertical-same($space*0.5);
+    }  
+  }
+
+  @media only screen and (min-width: 550px) {
+    max-width: 518px;
+    margin: $space*2 auto;
+  }
+
+  @media only screen and (min-width: 880px) {
+    margin: 0;
+    max-width: 440px;
+  }
+}
+
+#encrypt-section {
+  @media only screen and (min-width: 880px) {
+    margin-left: $space*2;
+  }
+}
+
+#decrypt-section {
+  @media only screen and (min-width: 880px) {
+    margin-right: $space*2;
+  }
+}

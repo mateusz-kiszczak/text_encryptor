@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text Encryptor</title>
+  <link rel="stylesheet" href="scss/main.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main>
+    <h1>Text encryptor</h1>
+    <div id="cryptex">
+      <div class="ring">t</div>
+      <div class="ring">e</div>
+      <div class="ring">x</div>
+      <div class="ring">t</div>
+      <div class="ring">&nbsp;</div>
+      <div class="ring">e</div>
+      <div class="ring">n</div>
+      <div class="ring">c</div>
+      <div class="ring">r</div>
+      <div class="ring">y</div>
+      <div class="ring">p</div>
+      <div class="ring">t</div>
+      <div class="ring">o</div>
+      <div class="ring">r</div>
+    </div>
+
+
+    <section id="encrypt-section" class="encrypt-decrypt">
+      <h2>Encrypt</h2>
+
+      <section class="input-section">
+        <h3>1. Encrypt text</h3>
+        <div class="alert hidden">
+          <p>Paste or write down some text for encryption.</p>
+        </div>
+        <div class="input-container">
+          <label for="encrypt-input">Paste or write down some text for encryption</label>
+          <textarea id="encrypt-input" name="encrypt-input" spellcheck="true"></textarea>
+        </div>
+      </section>
+
+      <section class="cipher-section">
+        <h3>2. Encryption type</h3>
+        <div class="alert hidden">
+          <p>Choose predefine encryption OR set your own value.</p>
+        </div>
+        <p>Choose predefine encryption</p>
+        <div class="cipher-buttons-container">
+          <button class="cipher-button encrypt-cipher-button">A</button>
+          <button class="cipher-button encrypt-cipher-button">B</button>
+          <button class="cipher-button encrypt-cipher-button">C</button>
+          <button class="cipher-button encrypt-cipher-button">D</button>
+          <button id="submit-predefined-encrypt-value" class="submit-value">Encrypt</button>
+        </div>
+        <section class="custom-cipher">
+          <h4>OR set your own encryption</h4>
+          <div class="input-container">
+            <label for="encrypt-value">Positive or negative integer</label>
+            <div class="own-cipher">
+              <input type="number" id="encrypt-value" name="encrypt-value" minlength="1" maxlength="8">
+              <button id="submit-own-encrypt-value" class="submit-value">Encrypt</button>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section class="output-section">
+        <h3>3. Encrypted text</h3>
+        <div id="encrypt-output" class="text-output">
+          <p>...</p>
+        </div>
+        <div class="output-buttons-container">
+          <button id="reset-encrypt" class="reset-button">Reset all</button>
+          <button id="copy-encrypted" class="copy-button">Copy above text</button>
+        </div>
+      </section>
+    </section>
+
+
+    <section id="decrypt-section" class="encrypt-decrypt">
+      <h2>Decrypt</h2>
+
+      <section class="input-section">
+        <h3>1. Decrypt text</h3>
+        <div class="alert hidden">
+          <p>Paste or write down some text for decryption.</p>
+        </div>
+        <div class="input-container">
+          <label for="decrypt-input">Paste or write down some text for decryption</label>
+          <textarea id="decrypt-input" name="decrypt-input" spellcheck="true"></textarea>
+        </div>
+      </section>
+
+      <section class="cipher-section">
+        <h3>2. Decryption type</h3>
+        <div class="alert hidden">
+          <p>Choose predefine decryption OR set your own value.</p>
+        </div>
+        <p>Choose predefine decryption</p>
+        <div class="cipher-buttons-container">
+          <button class="cipher-button decrypt-cipher-button">A</button>
+          <button class="cipher-button decrypt-cipher-button">B</button>
+          <button class="cipher-button decrypt-cipher-button">C</button>
+          <button class="cipher-button decrypt-cipher-button">D</button>
+          <button id="submit-predefined-decrypt-value" class="submit-value">Decrypt</button>
+        </div>
+        <section class="custom-cipher">
+          <h4>OR set your own decryption</h4>
+            <div class="input-container">
+              <label for="decrypt-value">Positive or negative integer</label>
+              <div class="own-cipher">
+                <input type="number" id="decrypt-value" name="decrypt-value" minlength="1" maxlength="8">
+                <button id="submit-own-decrypt-value" class="submit-value">Decrypt</button>
+              </div>
+            </div>
+        </section>
+      </section>
+
+      <section class="output-section">
+        <h3>3. Decrypted text</h3>
+        <div id="decrypt-output" class="text-output">
+          <p>...</p>
+        </div>
+        <div class="output-buttons-container">
+          <button id="reset-decrypt" class="reset-button">Reset all</button>
+          <button id="copy-decrypted" class="copy-button">Copy above text</button>
+        </div>
+      </section>
+    </section>
+
+  </main>
+</body>
+</html>

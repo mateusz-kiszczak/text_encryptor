@@ -1,0 +1,18 @@
+.alert {
+  @include padding-vertical-same($space);
+  @include margin-vertical-same($space);
+  @include bg-color($red, 100%, 90%);
+  @include border(2px, solid, hsl($red, 100%, 40%));
+  @include display-flex(row, center, center);
+
+  p {
+    font-weight: 700;
+    margin: 0;
+
+    @include padding-horizontal-same($space);
+  }
+}
+
+.hidden {
+  display: none;
+}

@@ -1,0 +1,99 @@
+.cipher-button,
+.submit-value {
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.cipher-button {
+  height: 35px;
+  transition: all linear 0.1s;
+  user-select: none;
+  width: 35px;
+
+  @include bg-color($orange, 100%, 98%);
+  @include border(2px, solid, hsl($orange, 70%, 20%), 5px);
+
+  &:hover {
+    box-shadow: 0px 0px 8px hsl($orange, 100%, 95%);
+
+    @include bg-color($orange, 100%, 90%);
+  }
+
+  &:active {
+    box-shadow: $bs-but-pressed-active;
+    color: hsl($green, 70%, 95%);
+
+    @include bg-color($green, 100%, 20%);
+    @include border(2px, solid, hsl($green, 70%, 95%), 5px);
+  }
+
+  @media only screen and (min-width: 440px) {
+    height: 45px;
+    width: 45px;
+  }
+}
+
+.encrypt-pressed-button,
+.decrypt-pressed-button {
+  box-shadow: $bs-but-pressed-active;
+  color: hsl($green, 70%, 95%);
+  user-select: none;
+
+  @include bg-color($green, 100%, 20%);
+  @include border(2px, solid, hsl($green, 70%, 95%), 5px);
+
+  &:hover {
+    box-shadow: $bs-but-pressed-active;
+
+    @include bg-color($green, 100%, 20%);
+  }
+
+  &:active {
+    box-shadow: $bs-but-pressed-active;
+    color: hsl($green, 70%, 95%);
+
+    @include bg-color($green, 100%, 20%);
+    @include border(2px, solid, hsl($green, 70%, 95%), 5px);
+  }
+}
+
+.submit-value {
+  box-shadow: inset 1px 1px 2px hsl($green, 100%, 60%);
+  color:hsl($green, 70%, 95%);
+  height: 35px;
+  transition: all linear 0.1s;
+  user-select: none;
+
+  @include bg-color($green, 100%, 20%);
+  @include border(2px, solid, hsl($green, 70%, 95%), 5px);
+  @include padding-horizontal-same($space*0.5);
+
+  &:hover {
+    box-shadow: none;
+    color: hsl($green, 100%, 10%);
+
+    @include bg-color($green, 100%, 90%);
+  }
+
+  &:active {
+    box-shadow: inset 1px 1px 4px hsl($green, 100%, 20%);
+  }
+
+  @media only screen and (min-width: 440px) {
+    height: 45px;
+  }
+}
+
+.output-buttons-container {
+  button {
+    border-radius: 5px;
+    cursor: pointer;
+    padding: $space*0.25 $space*0.5;
+  }
+
+  .reset-button {
+    color:hsl($red, 100%, 100%);
+
+    @include bg-color($red, 100%, 30%);
+  }
+}

@@ -1,0 +1,22 @@
+// COLORS
+// Color Hue
+$green: 145;
+$orange: 38;
+$purple: 275;
+$red: 0;
+
+// FONTS
+$font-size: 16px;
+$sans-serif: Roboto, Helvetica, Arial, sans-serif;
+$monospace: 'Roboto Mono', 'Courier New', Courier, monospace;
+
+// MARGIN AND PADDING
+$space: $font-size;
+
+// WIDTH
+$full-width: 100vw;
+$max-width: 700px;
+$min-width: 350px;
+
+// BOX-SHADOW
+$bs-but-pressed-active: 0px 0px 8px hsl($green, 100%, 50%), inset 1px 1px 4px hsl($green, 100%, 0%);
